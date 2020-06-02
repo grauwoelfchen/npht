@@ -1,0 +1,9 @@
+[package]
+name = "npht"
+publish = false
+version = "0.0.1"
+authors = ["Yasuhiro Яша Asaka <yasuhiro.asaka@grauwoelfchen.net>"]
+edition = "2018"
+
+[dependencies]
+ncurses = "5.99.0"
