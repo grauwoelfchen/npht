@@ -20,8 +20,10 @@ fn main() {
         addstr("The pressed key is ");
         attron(A_BOLD() | A_BLINK());
 
-        addstr(
-            &format!("{}", char::from_u32(ch as u32).expect("invalid char")));
+        addstr(&format!(
+            "{}",
+            char::from_u32(ch as u32).expect("invalid char")
+        ));
         attroff(A_BOLD() | A_BLINK());
     }
 
