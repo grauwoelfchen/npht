@@ -1,3 +1,5 @@
+#![feature(stmt_expr_attributes)]
+
 extern crate ncurses;
 
 use std::env;
@@ -36,13 +38,15 @@ fn main() {
         let s = String::from_utf8(buf).expect("from_utf8");
         for c in s.chars() {
             getyx(stdscr, &mut y, &mut x);
-            if y == (row - 1) { // at the end of screen
+            // at the end of screen
+            if y == (row - 1) {
                 addstr("<- Press any key ->");
                 getch();
                 clear();
                 mv(0, 0);
             }
 
+            #[rustfmt::skip]
             if prev == '/' && c == '*' { /* this is a comment should be bold */
                 attron(A_BOLD());
                 getyx(stdscr, &mut y, &mut x);
