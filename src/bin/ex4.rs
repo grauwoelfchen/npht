@@ -18,11 +18,7 @@ fn main() {
     getstr(&mut s);
 
     let res = format!("You entered: {}", s);
-    mvprintw(
-        LINES() - 2,
-        (col - res.len() as i32) / 2,
-        &res,
-    );
+    mvprintw(LINES() - 2, (col - res.len() as i32) / 2, &res);
     getch();
     endwin();
 }
