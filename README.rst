@@ -1,11 +1,14 @@
 NPHT
 ====
 
+Ncurses Programming How To
+
 The exercises from a guide `NCURSES Programming HOWTO`_ which are implemented
 by using `ncurses-rs`_ in Rust.
 
 .. _NCURSES Programming HOWTO: https://tldp.org/HOWTO/NCURSES-Programming-HOWTO/
 .. _ncurses-rs: https://docs.rs/crate/ncurses/5.99.0
+
 
 Build
 -----
